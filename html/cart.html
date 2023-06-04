@@ -1,0 +1,254 @@
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link rel="icon" type="image/x-icon" href="logo.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" type="text/css" href="cart.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <script src="main.js"></script>
+  
+  <style>
+    .cartt {
+      background-color: #f1f1f1;
+    }
+
+    .contat {
+      max-width: 50%;
+    }
+
+    .cc {
+      text-align: center;
+    }
+
+    .ci {
+      width: 50%;
+      margin-top: 10%;
+      margin-left: 25%;
+    }
+   
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a href="index.html">
+        <img alt="AltText" src="logo.png" class="img-fluid" style="width:40px;">
+      </a>
+
+
+      <div class="search-bar">
+        <input type="text" placeholder="Search">
+        <button class="searchbtn" type="submit"><i class="fa fa-search"></i></button>
+      </div>
+
+
+
+      <div class="navbar-nav flex-row">
+        <a href="about.html" class="nav-link me-3  nav-icon" style="color: black;">About Us</a>
+        <a href="register.html" class="nav-link nav-icon" style="color: black;"><i class="fa fa-user"
+            style="font-size: 1.2em;"></i> Register</a>
+
+        <a href="#" class="cart-icon" style="color: black;   padding-left: 5px;
+padding-right: 7px;"><i class="fa fa-shopping-cart mt-2 ml-3" style="font-size: 1.4em;"></i></a>
+
+      </div>
+
+
+    </div>
+  </nav>
+
+
+
+  <!-- navigation bar -->
+  <nav class="navbar navbar-expand-lg lower-navbar">
+    <div class="container">
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+
+
+
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a href="#" class="nav-link" style="color:black;">Dogs</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" style="color:black;">Cats</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" style="color:black;">Parrots</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" style="color:black;">Reptiles</a>
+          </li>
+          <li class="nav-item">
+            <a href="eldar.html" class="nav-link" style="color:black;">Toys</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" style="color:black;">Food&Treats</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" style="color:black;">Accessories</a>
+          </li>
+
+
+        </ul>
+      </div>
+  </nav>
+
+  <!-- showcase -->
+
+  <div class="p-5 " style="background-image: url('wave-haikei.png');">
+
+  </div>
+
+
+  <main>
+    <div class="container-fluid contat" style="margin-top: 70px;">
+      <div class="row">
+        <h1>My bag:</h1>
+          
+      <div class="col-md-6 mb-4">
+          <div class="w3-card-4 cartt">
+            <i class="fa fa-times" style=" margin-right:-50px;margin-left: 30px;color: rgb(39, 39, 39); font-size: 24px;"></i>
+            <img src="img1.png" alt="Card 1" class="cart-img ci">
+            <div class="w3-container w3-center cc">
+              <h4>Subtotal: <span id="subtotal1" style="color: #1BBC1B;">5,99€</span></h4>
+              <br><br>
+              <p style="margin: auto;">
+                <button onclick="updateNum('minus', 'subtotal1')">-</button>
+                <input type="text" id="num-input" value="1" readonly style="width:26px">
+                <button onclick="updateNum('plus', 'subtotal1')">+</button>
+              </p>
+              <br>
+              <h6 style="color: #1BBC1B;">Free Shipping</h6>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-md-6 mb-4">
+          <div class="w3-card-4 cartt">
+            <div class="w3-container cc">
+              <div style="float: left;">
+                <h4>Subtotal: <span id="subtotal2" style="color: #369034;">5.99</span></h4>
+                <br>
+                <h4>Shipping: <span  style="color: #369034;">FREE</span></h4>
+                <br>
+                <h4>Total: <span id="total" style="color: #369034;">5.99</span></h4>
+                <br>
+                <button class="btn btn-outline-secondary custom-button" type="submit" id="button-addon2"
+                  style="border-radius: 10px;">Proceed to checkout</button>
+                <br><br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      function updateNum(action, subtotalId) {
+        var numInput = document.getElementById("num-input");
+        var numValue = parseInt(numInput.value);
+        var subtotal = document.getElementById(subtotalId);
+    
+        if (action === "plus") {
+          numValue += 1;
+        } else if (action === "minus" && numValue > 1) {
+          numValue -= 1;
+        }
+    
+        numInput.value = numValue;
+        var price = numValue * 5.99;
+        subtotal.textContent = price.toFixed(2) + "€";
+    
+        var total = document.getElementById("total");
+        total.textContent = price.toFixed(2);
+
+        var total = document.getElementById("subtotal2");
+        total.textContent = price.toFixed(2);
+
+      }
+    </script>
+    
+
+
+  </main>
+
+
+  <section style="margin-top: 150px;">
+    <!-- margin between elements and footer down -->
+  </section>
+
+
+
+
+  <section class="p-3 text-center mt-4" style="background-color: #698569;">
+
+    <div class="container custom-container">
+      <div>
+        <form>
+          <p style="color: white;">Keep up-to-date with our PetMe offers</p>
+          <div class="input-group mb-3">
+            <input type="email" class="form-control me-3" placeholder="Email" aria-label="Recipient's email"
+              aria-describedby="button-addon2" style="border-radius: 10px;" required>
+            <input type="Password" class="form-control me-3" placeholder="Password" aria-label="Recipient's password"
+              aria-describedby="button-addon2" style="border-radius: 10px;" required>
+            <button class="btn btn-outline-secondary custom-button" type="submit" id="button-addon2"
+              style="border-radius: 10px;">Subscribe!</button>
+          </div>
+        </form>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- lower footer -->
+  <section class="pt-2" style="background-color: #DEEEDA;">
+    <div class="container d-flex justify-content-between align-items-center">
+      <p style="color: #334432; margin: 0 auto;">A sustainable shopping experience - shop with us today!</p>
+      <div>
+        <a href="#" class="social-link"> <i class="fa fa-instagram mt-3"
+            style="font-size: 34px; margin-left: 10px;"></i> </a>
+        <a href="#" class="social-link"> <i class="fa fa-facebook mb-4" style="font-size: 34px; margin-left: 10px;"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
