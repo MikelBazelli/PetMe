@@ -14,11 +14,6 @@
     background-color: #129712;  
 }
 
-#checkoutBtn:active{
-    background-color: #197b19;
-}
-
-
 .form-control{
     width: 300px;
 }
@@ -39,3 +34,4 @@
 .split label {
     display: block;
 }
+

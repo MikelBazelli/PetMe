@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link rel="icon" type="image/x-icon" href="images\parrot.png"><!--Favicon-->
+    <title>PetMe</title>
+    <link rel="icon" type="image/x-icon" href="../images/logo.png"><!--Favicon-->
 
     <!--Bootstrap, w3css links, Fant awesome-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!--Linking the html file to an external called style.css which contains the css code that modifies this page-->
-    <link rel="stylesheet" type="text/css" href="code\css\style.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    
       
 <style>
   .box {
@@ -21,43 +22,12 @@
     margin: auto;
   }
   
-  .box a {
-    align-items: center;
-    text-decoration: none;
-    margin: 0 10px; 
-  }
-  
-  .box img {
-    width: 100%;
-  }
-  
-  h4,.txt{
-  float: left; /*all h4 and p elements will be aligned to the left side */
-  }
-  
-  .txt{
-  font-size: 13px;/*changning the size of letters*/ 
-  }
-  
-  .w3-card-4{
-  padding: 7px; 
-  background-color: #f1f1f1;
-  }
-  
   .w3-card-4:hover {
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.527);
-  transform: scale(0.9); /*The size of the cards transforms when hovering, the element will have 90% size of its original size*/
-  
-  }
-  .fa-star{
-  color: #FFAC60;
-  float: left;
-  margin-bottom: -12px;
-  }
-  h5 {
-  margin-top: 0%;
-  color: #289a28;
+  transform: scale(0.9);
+
 }
+
   </style>
 
   </head>
@@ -68,7 +38,7 @@
       <div class="container">
 
           <a href="index.html"><!--This is the logo which is also a link to the same page-->
-                <img alt="AltText" src="images\logo.png" class="img-fluid"style="width:40px;">
+                <img alt="AltText" src="../images/logo.png" class="img-fluid" style="width:40px;">
             </a>
     
          <div class="search-bar">
@@ -82,7 +52,7 @@
     <a href="about.html" class="nav-link me-3  nav-icon" style="color: black;">About Us</a>
     <a href="register.html" class="nav-link nav-icon" style="color: black;"><i class="fa fa-user" style="font-size: 1.2em;"></i> Register</a>
   
-  <a href="#" class="cart-icon"style="color: black;   padding-left: 5px;
+  <a href="cart.html" class="cart-icon" style="color: black;   padding-left: 5px;
   padding-right: 7px;"><i class="fa fa-shopping-cart mt-2 ml-3" style="font-size: 1.4em;"></i></a>
 
 </div>
@@ -107,7 +77,7 @@
 	   				<a href="#" class="nav-link" style="color:black;">Dogs</a>
 	   			</li>
 	   			<li class="nav-item">
-	   				<a href="#" class="nav-link" style="color:black;">Cats</a>
+	   				<a href="cats.html" class="nav-link" style="color:black;">Cats</a>
 	   			</li>
 	   			<li class="nav-item">
 	   				<a href="#" class="nav-link" style="color:black;">Parrots</a>
@@ -116,7 +86,7 @@
 	   				<a href="#" class="nav-link" style="color:black;">Reptiles</a>
 	   			</li>
 	   			<li class="nav-item">
-	   				<a href="eldar.html" class="nav-link" style="color:black;">Toys</a>
+	   				<a href="#" class="nav-link" style="color:black;">Toys</a>
 	   			</li>
 	   			<li class="nav-item">
 	   				<a href="#" class="nav-link" style="color:black;">Food&Treats</a>
@@ -128,10 +98,11 @@
 
 	   		</ul>
 	   	</div>
-	   </nav> 
+	        </div>
+        </nav>
 
 <!--This is the background image of the web-->	  
-	  <div class="p-5 " style="background-image: url('wave-haikei.png');">
+	  <div class="p-5 " style="background-image: url('../images/wave-haikei.png');">
 	  
 		</div>
 
@@ -145,26 +116,26 @@
        
     <div class="row">
         <div class="col-md-3 col-sm-6 col-xs-12 mb-4">
-        <a href="LinkT">
-            <img alt="AltText" src="SearchByDog.jpg" class="img-fluid">
+        <a href="#">
+            <img alt="AltText" src="../images/SearchByDog.jpg" class="img-fluid">
         </a>
         </div>
 
         <div class="col-md-3 col-sm-6 col-xs-12 mb-4">
-        <a href="LinkToImage">
-            <img  alt="AltText" src="SearchByCat.jpg" class="img-fluid">
+        <a href="cats.html">
+            <img  alt="AltText" src="../images/SearchByCat.jpg" class="img-fluid">
         </a>
         </div>
 
         <div class="col-md-3 col-sm-6 col-xs-12 mb-4">
-        <a href="LinkToImage">
-            <img src="SearchByParrot.jpg" alt="AltText" class="img-fluid">
+        <a href="#">
+            <img src="../images/SearchByParrot.jpg" alt="AltText" class="img-fluid">
         </a>
         </div>
 
         <div class="col-md-3 col-sm-6 col-xs-12 mb-4">
-        <a href="LinkToImage">
-            <img alt="AltText" src="SearchByReptile.jpg" class="img-fluid">
+        <a href="#">
+            <img alt="AltText" src="../images/SearchByReptile.jpg" class="img-fluid">
         </a>
         </div>
     </div>
@@ -188,7 +159,7 @@
             <a href="Catproduct.html">
             <div class="w3-container">
               <div class="w3-card-4" style="width:100%">
-                <img src="img1.png" alt="Card 1">
+                <img src="../images/img1.jpg" alt="Card 1">
                 <div class="w3-container w3-center">
                   <h4 >Kit Cat Chicken </h4><br><br>
                   <h5>6,99€</h5>
@@ -207,7 +178,7 @@
               <a href="#">
               <div class="w3-container">
                 <div class="w3-card-4" style="width:100%">
-                  <img src="parrot.png" alt="Card 1">
+                  <img src="../images/parrot.jpg" alt="Card 1">
                   <div class="w3-container w3-center">
                     <h4 >Kaytee Supreme</h4><br><br>
                     <h5>12,99€</h5>
@@ -226,9 +197,9 @@
             <a href="#">
             <div class="w3-container">
               <div class="w3-card-4" style="width:100%">
-                <img src="img3.png" alt="Card 1">
+                <img src="../images/img3.jpg" alt="Card 1">
                 <div class="w3-container w3-center">
-                  <h4 >All Cats</h4><br><br>
+                  <h4 >All Cats food</h4><br><br>
                   <h5>8,99€</h5>
                   <p class="txt"><i class="fa fa-star" aria-hidden="true"></i> 
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -244,7 +215,7 @@
             <a href="#">
             <div class="w3-container">
               <div class="w3-card-4" style="width:100%">
-                <img src="dog.png" alt="Card 1">
+                <img src="../images/dog.jpg" alt="Card 1">
                 <div class="w3-container w3-center">
                   <h4>Dog small toys</h4><br><br>
                   <h5>6,99€</h5>
@@ -258,14 +229,21 @@
               </div>
             </div></a>
           </div>
+          </div>
+
+        </div> <!--Closing  <div class="box" id="elements"> -->
       
     </main>
 
-    <section style="margin-top: 90px;">
+<section style="margin-top: 90px;">
       <!-- margin between elements and footer down -->
-    </section>
+      </section>
 
 
+
+    
+
+	
 
 
     <section class="p-3 text-center mt-4"  style="background-color: #698569;">
@@ -274,24 +252,29 @@
         <div><form>
           <p style="color: white;">Keep up-to-date with our PetMe offers</p>
           <div class="input-group mb-3">
-            <input type="email" class="form-control me-3" placeholder="Email" aria-label="Recipient's email" aria-describedby="button-addon2" style="border-radius: 10px;"required>
-            <input type="Password" class="form-control me-3" placeholder="Password" aria-label="Recipient's password" aria-describedby="button-addon2" style="border-radius: 10px;"required>
+            <input type="email" class="form-control me-3" placeholder="Email" aria-label="Recipient's email" aria-describedby="button-addon2" style="border-radius: 10px;" required>
+            <input type="Password" class="form-control me-3" placeholder="Password" aria-label="Recipient's password" aria-describedby="button-addon2" style="border-radius: 10px;" required>
             <button class="btn btn-outline-secondary custom-button" type="submit" id="button-addon2" style="border-radius: 10px;">Subscribe!</button> 
           </div>
           </form>
     
+          
+    
         </div>
       </div>
-    </section>
+       </section>
     
 <!-- lower footer -->
 <section class="pt-2" style="background-color: #DEEEDA;">
+  
   <div class="container d-flex justify-content-between align-items-center">
-    <p style="color: #334432; margin: 0 auto;" id="shop">A sustainable shopping experience - shop with us today!</p>
+    <p style="color: #334432; margin: 0 auto;">A sustainable shopping experience - shop with us today!</p> 
     <div>
+
      <a href="#" class="social-link"> <i class="fa fa-instagram mt-3" style="font-size: 34px; margin-left: 10px;"></i> </a>
       <a href="#" class="social-link"> <i class="fa fa-facebook mb-4" style="font-size: 34px; margin-left: 10px;"></i> </a>
     </div>
+    
   </div>
 </section>
 
