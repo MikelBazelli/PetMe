@@ -20,7 +20,7 @@ Through the development of the PetMe website, I deepened my understanding of HTM
 
 ## How to run
 
-Download and extract the .zip folder. Then, navigate to the index.html file for running the website.
+Download the files, then navigate to the index.html file for running the website.
 html>index.html
 
 
